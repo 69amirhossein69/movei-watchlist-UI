@@ -1,4 +1,5 @@
 import { useState } from "react";
+import StarRating from "./StarRating";
 
 const tempMovieData = [
   {
@@ -55,6 +56,11 @@ export default function App() {
   const [watched, setWatched] = useState(tempWatchedData);
   return (
     <>
+      <StarRating
+        maxRating={5}
+        messages={["bad", "good", "ahhhhh", "great", "amazing"]}
+        defaultRating={3}
+      />
       <Navbar movies={movies}>
         <Logo />
         <Search />
